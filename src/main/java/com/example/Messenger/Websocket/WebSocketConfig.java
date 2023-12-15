@@ -27,7 +27,6 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     @Override
     public void registerStompEndpoints(final StompEndpointRegistry registry) {
         registry.addEndpoint("/our-websocket")
-                //CIA MES NURODOME KAD NAUDOSIME HANDSHAKE HANDLERI IR NURODOME KAD SUKURTU NAUJA OBJEKTA PAGAL MUSU KLASE
                 .setHandshakeHandler(new UserHandshakeHandler(){
                     public boolean beforeHandshake(
                             ServerHttpRequest request,
