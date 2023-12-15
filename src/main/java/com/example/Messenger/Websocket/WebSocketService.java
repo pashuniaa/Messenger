@@ -1,4 +1,4 @@
-package com.example.Messenger;
+package com.example.Messenger.Websocket;
 
 import com.example.Messenger.chat.ResponseMessage;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +20,6 @@ public class WebSocketService {
         messagingTemplate.convertAndSend("/topic/message", response);
     }
 
-    // CIA MES GAUNAME ID IR MESSAGE KAD SIUSTI ADRESATUI I FRONTENDA
     public void notifyUser(final String id, final String message){
         ResponseMessage response=new ResponseMessage(message);
         messagingTemplate.convertAndSendToUser(id, "/topic/private-messages", response);

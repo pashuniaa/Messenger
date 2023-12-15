@@ -1,6 +1,6 @@
-package com.example.Messenger.config;
+package com.example.Messenger.Websocket;
 
-import com.example.Messenger.UserHandshakeHandler;
+import com.example.Messenger.Websocket.UserHandshakeHandler;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.server.ServletServerHttpRequest;
